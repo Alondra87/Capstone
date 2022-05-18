@@ -19,7 +19,7 @@ const speakers = [{
   description: 'Suscipit aliqua and enim corporis dolore nulla. Numquam odit tempor. Tempor sequi. Ea iste eius quis so dolor.',
 }, {
   photo: './img/speaker_02.png',
-  name: 'David Ramos',
+  name: 'Denis Ramos',
   profession: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
   description: 'Commodi non, yet magni for elit aspernatur yet deserunt nequeporro. Ipsam aut dolores si fugit for quo. Nisi.',
 }, {
