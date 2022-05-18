@@ -338,7 +338,7 @@ a {
   font-family: 'Lato', sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 200%;
+  font-size: 100%;
   line-height: 150%;
   color: #ec5242;
   margin: 10px;
@@ -570,6 +570,10 @@ a {
     display: block;
   }
 
+  .program h3 {
+    font-size: 200%;
+  }
+
   .program img {
     width: 80px;
     height: 80px;
@@ -607,7 +611,7 @@ a {
     height: 0.5px;
   }
 
-  .featured div {
+  .featured .art {
     display: grid;
     grid-template-columns: 50% 50%;
   }
