@@ -14,6 +14,10 @@ body {
   src: url('cocogoose_trial.woff');
 }
 
+.mediabar {
+  display: none;
+}
+
 header {
   background-color: white;
   position: fixed;
@@ -37,46 +41,6 @@ a {
   padding: 0 24px;
 }
 
-.nav-menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 60px;
-  font-family: 'Lato', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 17px;
-  line-height: 24px;
-  letter-spacing: 0.03em;
-}
-
-.nav-link {
-  transition: 0.7s ease;
-}
-
-.nav-linkAT {
-  border: 4px solid #e02b27;
-  padding: 2%;
-  color: #e02b27;
-}
-
-.nav-link:hover {
-  color: #e02b27;
-}
-
-.nav-link:active {
-  color: #e02b27;
-}
-
-.logo {
-  width: 70px;
-}
-
-.hamburger {
-  display: none;
-  cursor: pointer;
-}
-
 .bar {
   display: block;
   width: 25px;
@@ -85,6 +49,66 @@ a {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   background-color: #333;
+}
+
+.hamburger {
+  cursor: pointer;
+  display: block;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.nav-menu {
+  position: fixed;
+  left: -100%;
+  top: 0;
+  gap: 0;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  background-color: #e02b27;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.nav-menu.active {
+  left: 0;
+}
+
+.nav-link {
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 200%;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: white;
+}
+
+.nav-item {
+  margin: 16px 0;
+}
+
+.nav-linkAT {
+  border: 4px solid white;
+  padding: 2%;
+  color: white;
+}
+
+.logo {
+  width: 70px;
 }
 
 .imagen_bg {
@@ -224,7 +248,15 @@ a {
   font-size: 250%;
   line-height: 150%;
   color: rgb(39, 39, 39);
-  padding: 50px;
+  padding: 50px 50px 0 50px;
+}
+
+.red-line {
+  display: block;
+  width: 5%;
+  height: 2px;
+  background: #ec5242;
+  margin: 1rem auto;
 }
 
 .creative p {
@@ -246,8 +278,14 @@ a {
   padding-bottom: 5%;
 }
 
+.img_past {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .past {
-  width: 30%;
+  width: 40%;
   border: 1px solid rgb(223, 223, 223);
   margin: 3%;
 }
@@ -259,7 +297,7 @@ a {
   font-size: 250%;
   line-height: 150%;
   color: rgb(39, 39, 39);
-  padding: 50px;
+  padding: 50px 50px 0 50px;
 }
 
 .historial p {
@@ -275,15 +313,16 @@ a {
 }
 
 .footer_about {
-  background-color: #333;
   display: inline-flex;
+  justify-content: center;
+  padding: 10%;
   width: 100%;
+  background-color: #333;
 }
 
 .footer_about img {
-  width: 20%;
-  height: 20%;
-  padding-top: 1%;
+  width: 100px;
+  height: 100px;
 }
 
 .footer_about p {
@@ -291,12 +330,13 @@ a {
   font-family: 'Lato', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 100%;
-  line-height: 150%;
+  font-size: 80%;
+  line-height: 120%;
   color: rgb(247, 247, 248);
-  margin-left: 20px;
-  margin-top: 20px;
-  margin-right: 20%;
+}
+
+.programs {
+  padding-top: 2%;
 }
 
 .program {
@@ -331,7 +371,7 @@ a {
   font-size: 200%;
   line-height: 150%;
   color: white;
-  padding: 50px;
+  padding: 50px 50px 0 50px;
 }
 
 .program h3 {
@@ -382,7 +422,7 @@ a {
   font-size: 200%;
   line-height: 150%;
   color: #272a31;
-  padding: 50px;
+  padding: 50px 50px 0 50px;
   text-align: center;
 }
 
@@ -398,8 +438,17 @@ a {
 }
 
 .featured .curriculum {
-  margin: 10px;
+  margin-top: 4px;
   padding: 10px;
+}
+
+.grey-line {
+  width: 2px;
+  height: 1px;
+  background: #333;
+  margin-left: 15px;
+  padding-left: 25px;
+  margin-bottom: 10px;
 }
 
 .curriculum h3 {
@@ -428,8 +477,8 @@ a {
   font-weight: 300;
   font-size: 100%;
   color: #272a31;
-  margin: 5px;
-  padding: 5px;
+  margin-left: 5px;
+  padding-left: 5px;
 }
 
 .partners {
@@ -446,7 +495,6 @@ a {
   font-size: 200%;
   line-height: 150%;
   color: white;
-  padding-bottom: 50px;
 }
 
 .partners img {
@@ -456,83 +504,72 @@ a {
 
 .footer_home {
   display: inline-flex;
+  justify-content: center;
+  padding: 10%;
   width: 100%;
 }
 
 .footer_home img {
-  width: 20%;
-  height: 20%;
-  padding-top: 1%;
+  width: 100px;
+  height: 100px;
 }
 
 .footer_home p {
-  text-align: start;
   font-family: 'Lato', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 100%;
-  line-height: 150%;
+  font-size: 80%;
+  line-height: 120%;
   color: #272a31;
-  margin-left: 20px;
-  margin-top: 20px;
-  margin-right: 20%;
-}
-
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: row-reverse;
-  }
-
-  .hamburger {
-    cursor: pointer;
-    display: block;
-  }
-
-  .hamburger.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  .hamburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-
-  .nav-menu {
-    position: fixed;
-    left: -100%;
-    top: 0;
-    gap: 0;
-    flex-direction: column;
-    background-color: #e02b27;
-    width: 100%;
-    text-align: center;
-    transition: 0.3s;
-  }
-
-  .nav-item {
-    margin: 16px 0;
-  }
-
-  .nav-link {
-    color: white;
-  }
-
-  .nav-linkAT {
-    color: white;
-    border: 4px solid white;
-  }
-
-  .nav-menu.active {
-    left: 0;
-  }
 }
 
 @media (min-width: 780px) {
+  .mediabar {
+    display: block;
+    background-color: #272a31;
+    text-align: end;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  .mediabar a {
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 100%;
+    line-height: 150%;
+    color: white;
+    padding-right: 30px;
+  }
+
   .hamburger {
     display: none;
+    cursor: pointer;
+  }
+
+  .nav-menu {
+    display: contents;
+    align-items: center;
+  }
+
+  .nav-link {
+    color: #272a31;
+    font-weight: 400;
+    font-size: 100%;
+    line-height: 24px;
+  }
+
+  .nav-linkAT {
+    border: 4px solid #e02b27;
+    color: #e02b27;
+  }
+
+  .nav-link:hover {
+    color: #e02b27;
+  }
+
+  .nav-link:active {
+    color: #e02b27;
   }
 
   .logo {
@@ -543,12 +580,6 @@ a {
     padding-top: 10%;
   }
 
-  .footer_about img {
-    width: 10%;
-    height: 10%;
-    padding-top: 1%;
-  }
-
   .home h1 {
     font-family: 'cocogoce', sans-serif;
     font-style: normal;
@@ -557,13 +588,42 @@ a {
     line-height: 70px;
   }
 
+  .img_past {
+    flex-direction: row;
+    gap: 20px;
+    margin-left: 5%;
+  }
+
+  .footer_about {
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
+
+  .footer_about img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .footer_about p {
+    font-weight: 400;
+    font-size: 100%;
+    line-height: 130%;
+  }
+
   .programs {
     display: flex;
     flex-direction: row;
     padding: 1px;
     margin: 2px;
+    padding-top: 3%;
     padding-left: 5%;
     padding-right: 5%;
+    width: 100%;
   }
 
   .program h2 {
@@ -571,7 +631,7 @@ a {
   }
 
   .program h3 {
-    font-size: 200%;
+    font-size: 150%;
   }
 
   .program img {
@@ -588,18 +648,19 @@ a {
     margin: 2px;
   }
 
-  .program button {
-    display: none;
-  }
-
   .program a {
     display: block;
     font-family: 'Lato', sans-serif;
     font-style: normal;
-    font-weight: 400;
-    font-size: 100%;
+    font-weight: 300;
+    font-size: 150%;
     line-height: 350%;
     color: white;
+    text-decoration: underline;
+  }
+
+  .program button {
+    display: none;
   }
 
   .featured img {
@@ -620,9 +681,24 @@ a {
     display: block;
   }
 
+  .footer_home {
+    display: flex;
+    flex-direction: row;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    gap: 10%;
+  }
+
   .footer_home img {
-    width: 10%;
-    height: 10%;
-    padding-top: 1%;
+    width: 130px;
+    height: 130px;
+  }
+
+  .footer_home p {
+    font-weight: 400;
+    font-size: 100%;
+    line-height: 130%;
   }
 }

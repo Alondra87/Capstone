@@ -22,6 +22,7 @@ const speakers = [{
   name: 'Denis Ramos',
   profession: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
   description: 'Commodi non, yet magni for elit aspernatur yet deserunt nequeporro. Ipsam aut dolores si fugit for quo. Nisi.',
+
 }, {
   photo: './img/speaker_03.png',
   name: 'Jhon Castillo',
@@ -46,17 +47,18 @@ const speakers = [{
 
 const loadSpeakers = () => {
   let showSpeakers = '';
+  const large = speakers.length;
 
-  for (let i = 0; i < speakers.length; i += 1) {
+  for (let i = 0; i < large; i += 1) {
     showSpeakers += `<article class="speaker">
    <img src="${speakers[i].photo}" alt="speaker_01">
    <div class="curriculum">
    <h3>${speakers[i].name}</h3>
    <h4>${speakers[i].profession}</h4>
+   <div class="grey-line"></div>
    <p>${speakers[i].description}</p>
    </div>
-  </article>`;
-
+   </article>`;
     document.getElementById('speaker').innerHTML = showSpeakers;
   }
 };
