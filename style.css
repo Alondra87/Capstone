@@ -313,26 +313,7 @@ a {
 }
 
 .footer_about {
-  display: inline-flex;
-  justify-content: center;
-  padding: 10%;
-  width: 100%;
-  background-color: #333;
-}
-
-.footer_about img {
-  width: 100px;
-  height: 100px;
-}
-
-.footer_about p {
-  text-align: start;
-  font-family: 'Lato', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 80%;
-  line-height: 120%;
-  color: rgb(247, 247, 248);
+  display: none;
 }
 
 .programs {
@@ -343,8 +324,6 @@ a {
   background-image: url(./img/patter.png);
   background-repeat: repeat;
   background-color: rgb(39, 42, 50);
-
-  /* height: 637px; para mobil auto */
   text-align: center;
   padding-bottom: 60px;
   width: 100%;
@@ -613,6 +592,10 @@ a {
     font-weight: 400;
     font-size: 100%;
     line-height: 130%;
+  }
+
+  .footer_ligth {
+    display: none;
   }
 
   .programs {
