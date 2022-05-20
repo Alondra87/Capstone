@@ -37,6 +37,7 @@ a {
   min-height: 70px;
   display: flex;
   justify-content: space-between;
+  flex-direction: row-reverse;
   align-items: center;
   padding: 0 24px;
 }
@@ -119,7 +120,7 @@ a {
 }
 
 .home {
-  margin-left: 10%;
+  margin-left: 5%;
   height: 90%;
 }
 
@@ -245,10 +246,10 @@ a {
   font-family: 'Lato', sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 250%;
+  font-size: 200%;
   line-height: 150%;
   color: rgb(39, 39, 39);
-  padding: 50px 50px 0 50px;
+  padding: 20px 20px 0 20px;
 }
 
 .red-line {
@@ -263,12 +264,10 @@ a {
   font-family: 'Lato', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 150%;
+  font-size: 20px;
   line-height: 150%;
   color: rgb(87, 87, 87);
-  margin: 10px;
-  padding-left: 25%;
-  padding-right: 25%;
+  padding: 25px;
 }
 
 .historial {
@@ -294,22 +293,20 @@ a {
   font-family: 'Lato', sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 250%;
+  font-size: 200%;
   line-height: 150%;
   color: rgb(39, 39, 39);
-  padding: 50px 50px 0 50px;
+  padding: 20px 20px 0 20px;
 }
 
 .historial p {
   font-family: 'Lato', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 150%;
+  font-size: 20px;
   line-height: 150%;
   color: rgb(87, 87, 87);
-  margin: 10px;
-  padding-left: 25%;
-  padding-right: 25%;
+  padding: 20px;
 }
 
 .footer_about {
@@ -461,9 +458,10 @@ a {
 }
 
 .partners {
-  background-color: #272a31;
+  background-color: #474646;
   padding: 30px;
   width: 100%;
+  text-align: center;
 }
 
 .partners h2 {
@@ -476,9 +474,20 @@ a {
   color: white;
 }
 
-.partners img {
-  width: 20%;
-  padding: 10px;
+.partners ul {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 200%;
+  line-height: 150%;
+  width: 100%;
+}
+
+.partners li {
+  width: 50%;
+  color: #8b8686;
 }
 
 .footer_home {
@@ -505,10 +514,12 @@ a {
 @media (min-width: 780px) {
   .mediabar {
     display: block;
-    background-color: #272a31;
+    background-color: #474646;
     text-align: end;
     padding-top: 4px;
     padding-bottom: 4px;
+    padding-left: 8%;
+    padding-right: 8%;
   }
 
   .mediabar a {
@@ -526,9 +537,22 @@ a {
     cursor: pointer;
   }
 
+  .navbar {
+    flex-direction: row;
+    gap: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .link_logo {
+    width: 50%;
+  }
+
   .nav-menu {
     display: contents;
-    align-items: center;
+    flex-direction: row;
+    text-align: right;
+    width: 50%;
   }
 
   .nav-link {
@@ -559,6 +583,10 @@ a {
     padding-top: 10%;
   }
 
+  .home {
+    margin-left: 10%;
+  }
+
   .home h1 {
     font-family: 'cocogoce', sans-serif;
     font-style: normal;
@@ -567,18 +595,37 @@ a {
     line-height: 70px;
   }
 
+  .creative h2 {
+    font-size: 250%;
+    padding: 50px 50px 0 50px;
+  }
+
+  .creative p {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+
+  .historial h2 {
+    font-size: 250%;
+    padding: 50px 50px 0 50px;
+  }
+
+  .historial p {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+
   .img_past {
     flex-direction: row;
-    gap: 20px;
-    margin-left: 5%;
+    margin-left: 8%;
   }
 
   .footer_about {
     display: flex;
     flex-direction: row;
     gap: 10%;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 10%;
+    padding-right: 10%;
     padding-top: 3%;
     padding-bottom: 3%;
   }
@@ -604,8 +651,8 @@ a {
     padding: 1px;
     margin: 2px;
     padding-top: 3%;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
     width: 100%;
   }
 
@@ -646,6 +693,11 @@ a {
     display: none;
   }
 
+  .featured {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
   .featured img {
     width: auto;
     height: auto;
@@ -664,11 +716,20 @@ a {
     display: block;
   }
 
+  .partners {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .partners ul {
+    flex-wrap: nowrap;
+  }
+
   .footer_home {
     display: flex;
     flex-direction: row;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 10%;
+    padding-right: 10%;
     padding-top: 3%;
     padding-bottom: 3%;
     gap: 10%;
